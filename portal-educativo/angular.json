@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "portal-educativo"
+    }
+  },
+  "defaultProject": "portal-educativo",
+  "cli": {
+    "analytics": "2390677a-f25e-47d0-b0e1-a025393a12cc"
+  }
 }
