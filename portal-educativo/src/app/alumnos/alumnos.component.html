@@ -1,68 +1,98 @@
-<h5 class="card-title">Listado de Alumnos</h5>
+<section class="container">
+    <h5 class="card-title">Listado de Alumnos</h5>
 
-<form [formGroup]="form">
-    <p>
-        Id: <br />
-        <input type="text" formControlName="id">
-    </p>
-    <p>
-        Nombre: <br />
-        <input type="text" formControlName="nombre">
-    </p>
-    <p>
-        Apellido: <br />
-        <input type="text" formControlName="apellido">
-    </p>
-    <p>
-        Fecha Nacimiento: <br />
-        <input type="date" formControlName="fechaNacimiento">
-    </p>
-    <p>
-        Sexo: <br />
-        <input type="radio" name="sexo" formControlName="sexo" value="Masculino"> Masculino<br>
-        <input type="radio" name="sexo" formControlName="sexo" value="Femenino"> Femenino<br>
-        <input type="radio" name="sexo" formControlName="sexo" value="Otros"> Otros
-    </p>
-    <p>
-        Direccion: <br />
-        <input type="text" formControlName="direccion">
-    </p>
-    <p>
-        Correo: <br />
-        <input type="email" formControlName="correo">
-    </p>
-</form>
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="form">
+                <div class="form-group row">
+                    <label for="" class="col-1 offset-1 col-form-label">DNI:</label>
+                    <input type="text" placeholder="Escribe tu DNI aqui" formControlName="dni"
+                        class="form-control col-4">
 
+                    <label for="" class="col-2 col-form-label">Fecha Nacimiento:</label>
+                    <input type="date" placeholder="Escribe tu Fecha de Nacimiento aqui"
+                        formControlName="fechaNacimiento" class="form-control col-4">
+                </div>
 
+                <div class="form-group row">
+                    <label for="" class="col-1 offset-1 col-form-label">Nombre:</label>
+                    <input type="text" placeholder="Escribe tu Nombre aqui" formControlName="nombre"
+                        class="form-control col-4">
 
-<div class="card border-primary mb-3">
-    <div class="card-header">Alumnos</div>
-    <div class="card-body text-primary">
+                    <label for="" class="col-2 col-form-label">Apellido:</label>
+                    <input type="text" placeholder="Escribe tu Apellido aqui" formControlName="apellido"
+                        class="form-control col-4">
+                </div>
 
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>nombre</th>
-                    <th>apellido</th>
-                    <th>fechaNacimiento</th>
-                    <th>sexo</th>
-                    <th>direccion</th>
-                    <th>correo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let alumno of alumnos">
-                    <td>{{ alumno.id}}</td>
-                    <td>{{ alumno.nombre}}</td>
-                    <td>{{ alumno.apellido}}</td>
-                    <td>{{ alumno.fechaNacimiento}}</td>
-                    <td>{{ alumno.sexo}}</td>
-                    <td>{{ alumno.direccion}}</td>
-                    <td>{{ alumno.correo}}</td>
-                </tr>
-            </tbody>
-        </table>
+                <div class="form-group row">
+                    <label for="" class="col-1 offset-1 col-form-label">Dirección:</label>
+                    <input type="text" placeholder="Escribe tu Dirección aqui" formControlName="direccion"
+                        class="form-control col-4">
+
+                    <label for="" class="col-2 4col-form-label"> Correo Electronico:</label>
+                    <input type="email" placeholder="Escribe tu Correo Electronico aqui" formControlName="correo"
+                        class="form-control col-4">
+                </div>
+
+                <div class="form-group row">
+                    <label for="" class="col-1 offset-1 col-form-label">Sexo:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" formControlName="sexo"
+                            id="inlineRadio1" value="Masculino">
+                        <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" formControlName="sexo"
+                            id="inlineRadio2" value="Masculino">
+                        <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" formControlName="sexo"
+                            id="inlineRadio3" value="Masculino">
+                        <label class="form-check-label" for="inlineRadio3">Otros</label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <button class="col-1 offset-1 btn btn-danger">Agregar</button>
+                </div>
+            </form>
+        </div>
 
     </div>
-</div>
+
+
+
+    <div class="card border-primary mb-3">
+        <div class="card-header">Alumnos</div>
+        <div class="card-body text-primary">
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Dni</th>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>fechaNacimiento</th>
+                        <th>sexo</th>
+                        <th>direccion</th>
+                        <th>correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let alumno of alumnos">
+                        <td>{{ alumno.dni}}</td>
+                        <td>{{ alumno.nombre}}</td>
+                        <td>{{ alumno.apellido}}</td>
+                        <td>{{ alumno.fechaNacimiento}}</td>
+                        <td>{{ alumno.sexo}}</td>
+                        <td>{{ alumno.direccion}}</td>
+                        <td>{{ alumno.correo}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</section>

@@ -10,11 +10,11 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 export class AlumnosComponent implements OnInit {
 
   alumnos: Alumno[] = [
-    { id: 1, nombre: 'cedrid', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
-    { id: 2, nombre: 'cedrid', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
-    { id: 3, nombre: 'cedrid', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
-    { id: 4, nombre: 'cedrid', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
-    { id: 5, nombre: 'cedrid', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' }
+    { dni: 43586953, nombre: 'cedrid', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
+    { dni: 43586954, nombre: 'paul', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
+    { dni: 43586955, nombre: 'edgar', apellido: 'llanos garcia', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
+    { dni: 43586956, nombre: 'alex', apellido: 'Contreras Granados', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' },
+    { dni: 43586957, nombre: 'ino', apellido: 'Abanto Rueda', fechaNacimiento: '18/03/2020', sexo: 'M', direccion: 'Av, manco capac 627', correo: 'cedridcj@gmail.com' }
   ];
 
   form: FormGroup;

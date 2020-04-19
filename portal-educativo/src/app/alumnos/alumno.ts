@@ -1,6 +1,6 @@
 export class Alumno{
     
-id: number;
+dni: number;
 nombre: string;
 apellido: string;
 fechaNacimiento: string;
