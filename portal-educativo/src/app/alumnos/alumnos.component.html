@@ -2,59 +2,63 @@
     <h5 class="card-title">Listado de Alumnos</h5>
 
     <div class="row">
-        <div class="col-12">
-            <form [formGroup]="form">
+        <div class="col-12 pr-5">
+            <form (ngSubmit) ="create()">
                 <div class="form-group row">
                     <label for="" class="col-1 offset-1 col-form-label">DNI:</label>
-                    <input type="text" placeholder="Escribe tu DNI aqui" formControlName="dni"
-                        class="form-control col-4">
+                    <input type="text" placeholder="Escribe tu DNI aqui" [(ngModel)]="alumno.dni"
+                        class="form-control col-4" name="dni"
+                        >
 
                     <label for="" class="col-2 col-form-label">Fecha Nacimiento:</label>
-                    <input type="date" placeholder="Escribe tu Fecha de Nacimiento aqui"
-                        formControlName="fechaNacimiento" class="form-control col-4">
+                    <input type="date" placeholder="Escribe tu Fecha de Nacimiento aqui" [(ngModel)]="alumno.fechaNacimiento"
+                        class="form-control col-4" name="fechaNacimiento">
                 </div>
 
                 <div class="form-group row">
                     <label for="" class="col-1 offset-1 col-form-label">Nombre:</label>
-                    <input type="text" placeholder="Escribe tu Nombre aqui" formControlName="nombre"
-                        class="form-control col-4">
+                    <input type="text" placeholder="Escribe tu Nombre aqui" [(ngModel)]="alumno.nombre"
+                        class="form-control col-4" name="nombre">
 
                     <label for="" class="col-2 col-form-label">Apellido:</label>
-                    <input type="text" placeholder="Escribe tu Apellido aqui" formControlName="apellido"
-                        class="form-control col-4">
+                    <input type="text" placeholder="Escribe tu Apellido aqui" [(ngModel)]="alumno.apellido"
+                        class="form-control col-4" name="apellido">
                 </div>
 
                 <div class="form-group row">
                     <label for="" class="col-1 offset-1 col-form-label">Dirección:</label>
-                    <input type="text" placeholder="Escribe tu Dirección aqui" formControlName="direccion"
-                        class="form-control col-4">
+                    <input type="text" placeholder="Escribe tu Dirección aqui" [(ngModel)]="alumno.direccion"
+                        class="form-control col-4" name="direccion">
 
                     <label for="" class="col-2 4col-form-label"> Correo Electronico:</label>
-                    <input type="email" placeholder="Escribe tu Correo Electronico aqui" formControlName="correo"
-                        class="form-control col-4">
+                    <input type="email" placeholder="Escribe tu Correo Electronico aqui" [(ngModel)]="alumno.correo"
+                        class="form-control col-4" name="correo">
                 </div>
 
                 <div class="form-group row">
                     <label for="" class="col-1 offset-1 col-form-label">Sexo:</label>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="sexo" formControlName="sexo"
+                        <input class="form-check-input" type="radio" name="sexo" [(ngModel)]="alumno.sexo"
                             id="inlineRadio1" value="Masculino">
                         <label class="form-check-label" for="inlineRadio1">Masculino</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="sexo" formControlName="sexo"
-                            id="inlineRadio2" value="Masculino">
+                        <input class="form-check-input" type="radio" name="sexo" [(ngModel)]="alumno.sexo"
+                            id="inlineRadio2" value="Femenino">
                         <label class="form-check-label" for="inlineRadio2">Femenino</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="sexo" formControlName="sexo"
-                            id="inlineRadio3" value="Masculino">
+                        <input class="form-check-input" type="radio" name="sexo" [(ngModel)]="alumno.sexo"
+                            id="inlineRadio3" value="Otros">
                         <label class="form-check-label" for="inlineRadio3">Otros</label>
                     </div>
                 </div>
 
+
                 <div class="form-group row">
-                    <button class="col-1 offset-1 btn btn-danger">Agregar</button>
+                    <button role="button" class="offset-4 btn btn-primary mr-4">Agregar</button>
+                    <button type="button" (click)="limpiar()" class="btn btn-success mr-4">Limpiar</button>
+                    <button type="button" class="btn btn-info">Exportar PDF</button>
                 </div>
             </form>
         </div>
